@@ -13,6 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -52,20 +53,23 @@ public class MainActivity extends AppCompatActivity {
 
         buildMenu();
 
-        findViewById(R.id.orderButton).setOnClickListener(v -> showSummary());
+        findViewById(R.id.orderButton)
+                .setOnClickListener(v -> showSummary());
 
         updateTotal();
     }
+
 
     private void buildMenu() {
         buildOrderTypeSelection();
         buildMainMenu();
 
-        // Uncomment the next line to show the additional menu-board items.
+        // Uncomment to show additional menu-board items.
         // buildBoardMenu();
 
         buildFooter();
     }
+
 
     private void buildOrderTypeSelection() {
         section("Order Type");
@@ -89,19 +93,33 @@ public class MainActivity extends AppCompatActivity {
         // Dine-in is selected by default.
         orderTypeGroup.check(dineInButton.getId());
 
-        orderTypeGroup.setOnCheckedChangeListener(
-                (group, checkedId) -> updateTotal()
-        );
+        orderTypeGroup.setOnCheckedChangeListener((group, checkedId) -> {
+            updateTotal();
+
+            if (checkedId == dineInButton.getId()) {
+                Toast.makeText(
+                        MainActivity.this,
+                        "Dine-in selected. No take-out charges.",
+                        Toast.LENGTH_SHORT
+                ).show();
+            } else if (checkedId == takeOutButton.getId()) {
+                Toast.makeText(
+                        MainActivity.this,
+                        "Take-out selected. ₱10 extra per tub.",
+                        Toast.LENGTH_SHORT
+                ).show();
+            }
+        });
 
         panel.addView(orderTypeGroup);
     }
 
     private boolean isTakeOut() {
         return orderTypeGroup != null
+                && takeOutButton != null
                 && orderTypeGroup.getCheckedRadioButtonId()
                 == takeOutButton.getId();
     }
-
 
     private void buildMainMenu() {
 
@@ -144,9 +162,9 @@ public class MainActivity extends AppCompatActivity {
         radioGroup("Spiciness", "Sweet", "Mild", "Strong");
 
         section("Add-ons");
-        item("Add-on Egg", 10);
-        item("Add-on Korean Noodle", 20);
-        item("Add-on Cheese", 10);
+        item("Add-on 1", 10);
+        item("Korean", 20);
+        item("Add-on 3", 10);
     }
 
     private void buildBoardMenu() {
@@ -202,6 +220,10 @@ public class MainActivity extends AppCompatActivity {
 
         panel.addView(note);
     }
+
+    // --------------------------------------------------
+    // FOOTER
+    // --------------------------------------------------
 
     private void buildFooter() {
         TextView contact = new TextView(this);
@@ -270,6 +292,9 @@ public class MainActivity extends AppCompatActivity {
         panel.addView(tv);
     }
 
+    // --------------------------------------------------
+    // MENU ITEMS
+    // --------------------------------------------------
 
     private void item(String name, int price) {
         LinearLayout row = new LinearLayout(this);
@@ -287,9 +312,19 @@ public class MainActivity extends AppCompatActivity {
                 1f
         ));
 
-        cb.setOnCheckedChangeListener(
-                (button, isChecked) -> updateTotal()
-        );
+        cb.setOnCheckedChangeListener((button, isChecked) -> {
+            updateTotal();
+
+            String message = isChecked
+                    ? button.getText() + " added to your order."
+                    : button.getText() + " removed from your order.";
+
+            Toast.makeText(
+                    MainActivity.this,
+                    message,
+                    Toast.LENGTH_SHORT
+            ).show();
+        });
 
         checks.add(cb);
         row.addView(cb);
@@ -313,10 +348,6 @@ public class MainActivity extends AppCompatActivity {
         panel.addView(row);
     }
 
-    // --------------------------------------------------
-    // TUB ITEMS
-    // --------------------------------------------------
-
     private void tubItem(String name, int price) {
         item(name, price);
 
@@ -324,12 +355,12 @@ public class MainActivity extends AppCompatActivity {
         tubItems.add(tub);
     }
 
+
     private void radioGroup(String label, String... options) {
         subHeading(label);
 
         RadioGroup group = new RadioGroup(this);
         group.setOrientation(RadioGroup.VERTICAL);
-
         group.setTag(label + " (" + sectionTitle() + ")");
 
         RadioButton none = new RadioButton(this);
@@ -363,6 +394,10 @@ public class MainActivity extends AppCompatActivity {
                 : title;
     }
 
+    // --------------------------------------------------
+    // STYLING
+    // --------------------------------------------------
+
     private void styleButton(CompoundButton button) {
         ColorStateList tint = new ColorStateList(
                 new int[][]{
@@ -391,19 +426,20 @@ public class MainActivity extends AppCompatActivity {
         );
     }
 
-
+    // --------------------------------------------------
+    // TOTAL CALCULATION
+    // --------------------------------------------------
 
     private void updateTotal() {
         int total = 0;
 
-        // Add the prices of all selected menu items.
         for (CheckBox cb : checks) {
             if (cb.isChecked()) {
                 total += (Integer) cb.getTag();
             }
         }
 
-        // Charge ₱10 per selected tub only for take-out orders.
+        // Add ₱10 for every selected tub only on take-out orders.
         if (isTakeOut()) {
             for (CheckBox tub : tubItems) {
                 if (tub.isChecked()) {
@@ -414,6 +450,7 @@ public class MainActivity extends AppCompatActivity {
 
         totalText.setText("Total: ₱" + money.format(total));
     }
+
     private void showSummary() {
         StringBuilder sb = new StringBuilder();
         boolean hasItems = false;
@@ -424,7 +461,6 @@ public class MainActivity extends AppCompatActivity {
                 .append(orderType)
                 .append("\n\n");
 
-        // Display selected menu items and prices.
         for (CheckBox cb : checks) {
             if (cb.isChecked()) {
                 int price = (Integer) cb.getTag();
@@ -437,7 +473,6 @@ public class MainActivity extends AppCompatActivity {
 
                 hasItems = true;
 
-                // Show the extra charge only for take-out tubs.
                 if (isTakeOut() && tubItems.contains(cb)) {
                     sb.append("   Take-out charge: ₱")
                             .append(money.format(TAKEOUT_CHARGE))
@@ -447,15 +482,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (!hasItems) {
-            new AlertDialog.Builder(this)
-                    .setMessage("Check at least one menu item.")
-                    .setPositiveButton("OK", null)
-                    .show();
+            Toast.makeText(
+                    MainActivity.this,
+                    "Please select at least one menu item.",
+                    Toast.LENGTH_SHORT
+            ).show();
 
             return;
         }
 
-        // Display selected spiciness or other radio choices.
         for (RadioGroup group : groups) {
             RadioButton selected = group.findViewById(
                     group.getCheckedRadioButtonId()
@@ -477,17 +512,21 @@ public class MainActivity extends AppCompatActivity {
         new AlertDialog.Builder(this)
                 .setTitle("Your Order")
                 .setMessage(sb.toString())
-                .setPositiveButton(
-                        "Call to confirm",
-                        (dialog, which) -> {
-                            Intent intent = new Intent(
-                                    Intent.ACTION_DIAL,
-                                    Uri.parse("tel:09177099809")
-                            );
+                .setPositiveButton("Call to confirm", (dialog, which) -> {
 
-                            startActivity(intent);
-                        }
-                )
+                    Toast.makeText(
+                            MainActivity.this,
+                            "Order saved successfully!",
+                            Toast.LENGTH_SHORT
+                    ).show();
+
+                    Intent intent = new Intent(
+                            Intent.ACTION_DIAL,
+                            Uri.parse("tel:09177099809")
+                    );
+
+                    startActivity(intent);
+                })
                 .setNegativeButton("Back", null)
                 .show();
     }
