@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="?android:attr/colorBackground"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tvHeaderTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Van &amp; Haylas Order"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#1448AD"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Dining Option Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="#E0E0E0">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dining Option"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#212121"
+                    android:layout_marginBottom="8dp" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/radioDineIn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dine In"
+                        android:textSize="16sp"
+                        android:padding="8dp" />
+
+                    <RadioButton
+                        android:id="@+id/radioTakeOut"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Take Out"
+                        android:textSize="16sp"
+                        android:padding="8dp" />
+                </RadioGroup>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Menu Extras Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="#E0E0E0">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Menu Items &amp; Extras"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#212121"
+                    android:layout_marginBottom="8dp" />
+
+                <CheckBox
+                    android:id="@+id/checkOne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fajitas"
+                    android:textSize="16sp"
+                    android:padding="8dp" />
+
+                <CheckBox
+                    android:id="@+id/checkTwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Spaghetti"
+                    android:textSize="16sp"
+                    android:padding="8dp" />
+
+                <CheckBox
+                    android:id="@+id/checkThree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Beef Steak"
+                    android:textSize="16sp"
+                    android:padding="8dp" />
+
+                <CheckBox
+                    android:id="@+id/checkFour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Korean Ramen"
+                    android:textSize="16sp"
+                    android:padding="8dp" />
+
+                <CheckBox
+                    android:id="@+id/checkFive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Teobokki"
+                    android:textSize="16sp"
+                    android:padding="8dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Complete Order Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnShow"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Complete Order"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="12dp"
+            android:backgroundTint="#1448AD" />
+
+    </LinearLayout>
+</ScrollView>
