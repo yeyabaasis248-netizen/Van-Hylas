@@ -1,0 +1,38 @@
+com.example.finalapplication.app-profileinstaller-1.4.0-0 C:\Users\Acer\.gradle\caches\9.6.0\transforms\043fcf53e8462828cd7e2051dcc24635\transformed\profileinstaller-1.4.0\res
+com.example.finalapplication.app-core-1.13.0-1 C:\Users\Acer\.gradle\caches\9.6.0\transforms\10e9889a2ba06b11abcb9c7edf593b72\transformed\core-1.13.0\res
+com.example.finalapplication.app-appcompat-1.7.0-2 C:\Users\Acer\.gradle\caches\9.6.0\transforms\1cf353910b3a0e1a699fcfdeca2769ac\transformed\appcompat-1.7.0\res
+com.example.finalapplication.app-core-runtime-2.2.0-3 C:\Users\Acer\.gradle\caches\9.6.0\transforms\20f1023dc6d0ac9020645321b3a39155\transformed\core-runtime-2.2.0\res
+com.example.finalapplication.app-lifecycle-viewmodel-2.6.2-4 C:\Users\Acer\.gradle\caches\9.6.0\transforms\24ea59a77af57a6abbc61854a59114a4\transformed\lifecycle-viewmodel-2.6.2\res
+com.example.finalapplication.app-emoji2-views-helper-1.3.0-5 C:\Users\Acer\.gradle\caches\9.6.0\transforms\2846efd3785a1d2c848c8ac546cb83e1\transformed\emoji2-views-helper-1.3.0\res
+com.example.finalapplication.app-viewpager2-1.0.0-6 C:\Users\Acer\.gradle\caches\9.6.0\transforms\322ce2373ac83adc022ae92c01bdf1c4\transformed\viewpager2-1.0.0\res
+com.example.finalapplication.app-constraintlayout-2.2.0-7 C:\Users\Acer\.gradle\caches\9.6.0\transforms\35b5a5fa89a5a2a65eff006c38d68fb9\transformed\constraintlayout-2.2.0\res
+com.example.finalapplication.app-cardview-1.0.0-8 C:\Users\Acer\.gradle\caches\9.6.0\transforms\3909e437a64bc043e9517ff5674dc8e2\transformed\cardview-1.0.0\res
+com.example.finalapplication.app-activity-ktx-1.9.3-9 C:\Users\Acer\.gradle\caches\9.6.0\transforms\3e56b0e21c0b52bbcbcaeaedea51e913\transformed\activity-ktx-1.9.3\res
+com.example.finalapplication.app-lifecycle-viewmodel-savedstate-2.6.2-10 C:\Users\Acer\.gradle\caches\9.6.0\transforms\464f38cb0a3f7b82e8c0036bd27f3f40\transformed\lifecycle-viewmodel-savedstate-2.6.2\res
+com.example.finalapplication.app-lifecycle-livedata-2.6.2-11 C:\Users\Acer\.gradle\caches\9.6.0\transforms\4e6d15fd8f238e0a63a4d29a136be569\transformed\lifecycle-livedata-2.6.2\res
+com.example.finalapplication.app-emoji2-1.3.0-12 C:\Users\Acer\.gradle\caches\9.6.0\transforms\594e86480d221d64c22b79e2ad9ff7f1\transformed\emoji2-1.3.0\res
+com.example.finalapplication.app-activity-1.9.3-13 C:\Users\Acer\.gradle\caches\9.6.0\transforms\6858b9eef663b716374226e8bdb31fd5\transformed\activity-1.9.3\res
+com.example.finalapplication.app-annotation-experimental-1.4.0-14 C:\Users\Acer\.gradle\caches\9.6.0\transforms\71a16307b79d06a8b87dddbc782526f2\transformed\annotation-experimental-1.4.0\res
+com.example.finalapplication.app-material-1.12.0-15 C:\Users\Acer\.gradle\caches\9.6.0\transforms\73497afa45a80d4a6f5b12cdd0371b4a\transformed\material-1.12.0\res
+com.example.finalapplication.app-coordinatorlayout-1.1.0-16 C:\Users\Acer\.gradle\caches\9.6.0\transforms\7a2db648bc6b766404517a97a16e929d\transformed\coordinatorlayout-1.1.0\res
+com.example.finalapplication.app-savedstate-1.2.1-17 C:\Users\Acer\.gradle\caches\9.6.0\transforms\88175f17d9dcad082a493a8c49689132\transformed\savedstate-1.2.1\res
+com.example.finalapplication.app-drawerlayout-1.1.1-18 C:\Users\Acer\.gradle\caches\9.6.0\transforms\8e57f2bbe304b5a72e7a30578287dad6\transformed\drawerlayout-1.1.1\res
+com.example.finalapplication.app-fragment-1.5.4-19 C:\Users\Acer\.gradle\caches\9.6.0\transforms\9c72c319a5effa5ce26d81edb186fa5c\transformed\fragment-1.5.4\res
+com.example.finalapplication.app-lifecycle-viewmodel-ktx-2.6.2-20 C:\Users\Acer\.gradle\caches\9.6.0\transforms\9d4b9d4410c90610d9f9607f4a16cf0d\transformed\lifecycle-viewmodel-ktx-2.6.2\res
+com.example.finalapplication.app-startup-runtime-1.1.1-21 C:\Users\Acer\.gradle\caches\9.6.0\transforms\a9e77514530f5743a01cc653ce889de6\transformed\startup-runtime-1.1.1\res
+com.example.finalapplication.app-lifecycle-runtime-ktx-2.6.2-22 C:\Users\Acer\.gradle\caches\9.6.0\transforms\b51643251a29cde60a339bc742cc41d4\transformed\lifecycle-runtime-ktx-2.6.2\res
+com.example.finalapplication.app-savedstate-ktx-1.2.1-23 C:\Users\Acer\.gradle\caches\9.6.0\transforms\c6a6b49cbd018dba1e2762692bb8e9c9\transformed\savedstate-ktx-1.2.1\res
+com.example.finalapplication.app-core-ktx-1.13.0-24 C:\Users\Acer\.gradle\caches\9.6.0\transforms\cc9ce9b0fd33e677341029e30c685ca2\transformed\core-ktx-1.13.0\res
+com.example.finalapplication.app-recyclerview-1.1.0-25 C:\Users\Acer\.gradle\caches\9.6.0\transforms\ddbdc02bdac1603cf862ee8f2cf273aa\transformed\recyclerview-1.1.0\res
+com.example.finalapplication.app-lifecycle-livedata-core-2.6.2-26 C:\Users\Acer\.gradle\caches\9.6.0\transforms\e1d903f98d0bb63ca843a9c71c2eb1d3\transformed\lifecycle-livedata-core-2.6.2\res
+com.example.finalapplication.app-lifecycle-runtime-2.6.2-27 C:\Users\Acer\.gradle\caches\9.6.0\transforms\f7cb972cfde37a020b21b608e332e14a\transformed\lifecycle-runtime-2.6.2\res
+com.example.finalapplication.app-transition-1.5.0-28 C:\Users\Acer\.gradle\caches\9.6.0\transforms\f8285f08294b266a56693152de7e7c70\transformed\transition-1.5.0\res
+com.example.finalapplication.app-lifecycle-process-2.6.2-29 C:\Users\Acer\.gradle\caches\9.6.0\transforms\f86aca4db6f07ce488555b1d075e4da5\transformed\lifecycle-process-2.6.2\res
+com.example.finalapplication.app-appcompat-resources-1.7.0-30 C:\Users\Acer\.gradle\caches\9.6.0\transforms\fe5b01968d5b78d9cd7b9be92af9851f\transformed\appcompat-resources-1.7.0\res
+com.example.finalapplication.app-pngs-31 C:\Users\Acer\Downloads\Van-Hylas-master (1)\Van-Hylas-master\FinalApplication\app\build\generated\res\pngs\debug
+com.example.finalapplication.app-resValues-32 C:\Users\Acer\Downloads\Van-Hylas-master (1)\Van-Hylas-master\FinalApplication\app\build\generated\res\resValues\debug
+com.example.finalapplication.app-packageDebugResources-33 C:\Users\Acer\Downloads\Van-Hylas-master (1)\Van-Hylas-master\FinalApplication\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.finalapplication.app-packageDebugResources-34 C:\Users\Acer\Downloads\Van-Hylas-master (1)\Van-Hylas-master\FinalApplication\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.finalapplication.app-debug-35 C:\Users\Acer\Downloads\Van-Hylas-master (1)\Van-Hylas-master\FinalApplication\app\build\intermediates\merged_res\debug\mergeDebugResources
+com.example.finalapplication.app-debug-36 C:\Users\Acer\Downloads\Van-Hylas-master (1)\Van-Hylas-master\FinalApplication\app\src\debug\res
+com.example.finalapplication.app-main-37 C:\Users\Acer\Downloads\Van-Hylas-master (1)\Van-Hylas-master\FinalApplication\app\src\main\res
