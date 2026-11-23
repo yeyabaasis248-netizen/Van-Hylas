@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center" android:padding="28dp" android:background="@drawable/foodbackground">
-    <ImageView android:layout_width="190dp" android:layout_height="140dp" android:src="@drawable/projectlogo" android:scaleType="fitCenter" android:contentDescription="Restaurant logo" />
-    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="VAN &amp; HYLA'S FOOD MENU" android:textColor="@color/white" android:textSize="25sp" android:textStyle="bold" android:gravity="center" android:padding="18dp" />
-    <Button android:id="@+id/btnAppetizers" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Appetizers" android:textSize="20sp" android:layout_margin="8dp" />
-    <Button android:id="@+id/btnMainCourse" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Main Course" android:textSize="20sp" android:layout_margin="8dp" />
-    <Button android:id="@+id/btnDesserts" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Desserts" android:textSize="20sp" android:layout_margin="8dp" />
-    <Button android:id="@+id/btnLogout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Logout" android:layout_marginTop="28dp" />
-</LinearLayout>
